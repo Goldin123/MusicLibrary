@@ -51,12 +51,12 @@
                 <td style="width:auto">
                     @if ((bool)(!(item.ShortList ?? false)))
                     {
-                        @Html.ActionLink("Add to Shortlist", "AddRemoveToShortList", new { id = item.ID, bShortlist = true })
+                        @Html.ActionLink("Add to Shortlist", "AddRemoveToArtistShortList", new { id = item.ID, bShortlist = true })
                     }
                     else
                     {
                         <label>Already shortlisted | </label>
-                        @Html.ActionLink("Remove Shortlist", "AddRemoveToShortList", new { id = item.ID, bShortlist = false })
+                        @Html.ActionLink("Remove Shortlist", "AddRemoveToArtistShortList", new { id = item.ID, bShortlist = false })
                     }
                 </td>
             </tr>
@@ -101,12 +101,12 @@
                                 <td style="width:auto">
                                     @if ((bool)(!(itm.Favourites ?? false)))
                                     {
-                                        @Html.ActionLink("Add Favourite", "AddRemoveToFavourites", new { id = itm.ID, bFavourites = true })
+                                        @Html.ActionLink("Add Favourite", "AddRemoveToArtistFavourites", new { id = itm.ID, bFavourites = true })
                                     }
                                     else
                                     {
                                         <label>Marked Favourite | </label>
-                                        @Html.ActionLink("Remove Favourite", "AddRemoveToFavourites", new { id = itm.ID, bFavourites = false })
+                                        @Html.ActionLink("Remove Favourite", "AddRemoveToArtistFavourites", new { id = itm.ID, bFavourites = false })
                                     }
                                 </td>
                             </tr>
